@@ -28,7 +28,7 @@ function handleAnswer(selectedAnswer) {
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]]; // Scambio degli elementi, teoricamente dovrebbe scambiare le risposte ad ogni domanda
+        [array[i], array[j]] = [array[j], array[i]]; // Scambio degli elementi, teoricamente dovrebbe scambiare le risposte ad
     }
 }
 
