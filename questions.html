@@ -8,9 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="questions.css">
-
-
+    <link rel="stylesheet" href="./questions.css">
+    <link href="https://fonts.cdnfonts.com/css/lcd" rel="stylesheet">
 </head>
 
 <body>
@@ -19,50 +18,21 @@
             <img class="logoImg" src="./assets/epicode_logo.png" alt="EpicodeLogo">
         </figure>
 
-        <div class="timerDiv">
-            TIMER
+        <div id="timerBox">
+            <div id="timerDigit"></div>
+            <svg>
+                <circle r="47" cx="50" cy="50"></circle>
+            </svg>
         </div>
     </div>
 
-    <!-- <div class="questionDiv">
-        <h2>What does CPU stand for?</h2>
-    </div> -->
+    <div class="contentBox">
+        <div id="questionText" class="questionText"></div>
+        <div id="answersGrid" class="answersGrid"></div>
+    </div>
 
-    <!-- <div class="answerDiv">
-        <form class="answerForm">
-            <div class="answerBox">
-                <input class="radioBtn" type="radio" name="answer" id="answerOne">
-                <label class="answer answerOne" for="answerOne">Central Processing Unit</label>
-            </div>
-
-            <div class="answerBox">
-                <input class="radioBtn" type="radio" name="answer" id="answerTwo">
-                <label class="answer answerTwo" for="answerTwo">Central Process Unit</label>
-            </div>
-
-            <div class="answerBox">
-                <input class="radioBtn" type="radio" name="answer" id="answerThree">
-                <label class="answer answerThree" for="answerThree">Computer Personal Unit</label>
-            </div>
-
-            <div class="answerBox">
-                <input class="radioBtn" type="radio" name="answer" id="answerFour">
-                <label class="answer answerFour" for="answerFour">Central Processor Unit</label>
-            </div>
-        </form>
-    </div> -->
-
- 
-
-
-
-
-
-
-
+    <script src="./scriptQuestions_02.js"></script>
 
 </body>
 
-<script src="./scriptWelcomePage.js"></script>
-<script src="./scriptProva.js"></script>
 </html>

@@ -2,7 +2,7 @@ let checkBox = document.querySelector("#honesty");
 let button = document.querySelector(".proceed-button");
 
 
-checkBox.addEventListener('change', function() {
+checkBox.addEventListener('change', function(){
     if (checkBox.checked) {
         button.disabled = false;
     } else {
@@ -12,7 +12,7 @@ checkBox.addEventListener('change', function() {
 
 button.addEventListener("click", function(){
     if(checkBox.checked){
-        window.location.href = "./questions.html";
+        window.location.href = "/questions.html";
     }
 });
 

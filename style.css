@@ -9,7 +9,7 @@ p, li {
 }
 
 .bg {
-    background-image: url('./assets/bg.jpg');
+    background-image: url('/assets/bg.jpg');
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -24,7 +24,7 @@ p, li {
 
 .logo {
     margin-top: 20px;
-    background-image: url('./assets/epicode_logo.png');
+    background-image: url('/assets/epicode_logo.png');
     width: 200px;
     height: 60px;
     background-size: contain;

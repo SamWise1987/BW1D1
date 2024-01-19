@@ -2,96 +2,197 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-image: url(./assets/bg.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .LogoBox {
-    margin: 40px 200px 50px 200px;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.figureLogo {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: auto;
+    margin-bottom: 50px;
 }
 
 .logoImg {
-    width: 20%;
-}
-
-.timerDiv {
-    margin: 0 100px 0 0;
-    color: white;
-    align-items: center;
+    width: 250px;
 }
 
 .questionDiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-h2 {
-    font-size: 60px;
+    font-size: 24px;
     color: white;
     font-family: 'Outfit', sans-serif;
-    min-width: 20px;
+    margin-bottom: 20px;
 }
 
-.answer {
-    font-size: 30px;
-    color: white;
-    padding: 15px;
-    cursor: pointer;
-    border-radius: 20px;
-}
+/* ho aggiunto una nuova classe css per gestire il layout dei pulsanti delle risposte in due righe */
 
-.radioBtn {
-    display: none;
-}
-
-#answerOne:checked~.answerOne,
-#answerTwo:checked~.answerTwo,
-#answerThree:checked~.answerThree,
-#answerFour:checked~.answerFour {
-    background-color: #900080;
-}
-
-.answerDiv{
+.contentBox {
     display: flex;
-    flex-wrap: wrap;
-}
-
-.answerForm {
-    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
+    margin-top: 20px;
+}
+
+.questionText {
+    font-size: 24px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 80%;
+}
+
+/* .answersGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, auto));
+    grid-gap: 20px;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    
+    padding: 20px;
+    width: auto;
+
+} */
+
+/* vari effetti figherrimi per i bottoni */
+/* .answerLabel {
+    display: block;
+    font-size: 20px;
+    color: white;
+    background-color: #282953;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    min-width: 100px;
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid #5f5f5f;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+} */
+
+/* sempre effetti figherrimi per i bottoni */
+/* .answerLabel:hover,
+.answerLabel:active {
+    background-color: #900080;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    inset 0 4px 8px 0 rgba(255, 255, 255, 0.1), 
+    0 0 12px 0 #900080; 
+} */
+
+#timerBox {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
 }
 
-.answerBox {
-    margin: 50px;
-    width: auto;
-    align-items: center;
-    align-content: center;
+#timerDigit {
+    font-family: 'LCD', sans-serif;
+    color: #00FFFF;
+    font-size: 2.1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+    z-index: 0;
+}
+
+svg circle {
+    stroke-dasharray: 314px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 6px;
+    stroke: #d20094;
+    fill: none;
+    animation: timerAnimation 30s linear infinite forwards;
+}
+
+@keyframes timerAnimation {
+    from {
+        stroke-dashoffset: 0px;
+    }
+
+    to {
+        stroke-dashoffset: 314px;
+    }
+}
+
+/* Questo è il css rivisto per i pulsanti ma non riesco a mettere i pulsanti a gruppi di due */
+.answerContainer {
     display: flex;
-    flex-wrap: wrap;
-    background-color:  #D20094;
-    border-radius: 20px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.answerRadio {
+    margin-right: 10px;
+}
+
+
+.answerRadio {
+    display: none;
+} 
+
+.answerLabel {
+    display: block;
+    font-size: 20px;
+    color: white;
+    background-color: #282953;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    min-width: 100px;
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid #5f5f5f;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.answerLabel:hover, .answerLabel:active {
+    background-color: #900080;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), inset 0 4px 8px 0 rgba(255, 255, 255, 0.1), 0 0 12px 0 #900080;
+}
+
+
+.answerRadio:checked + .answerLabel {
+    background-color: #900080; 
+}
+
+/* stavo provando a dare una estetica alla lista risultati ma sul css ci devo ragionare di più */
+#results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    font-size: 24px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
